@@ -1,7 +1,7 @@
 const tasks = [
   {
     id: '1',
-    text: 'learn HTML',
+    text: ' learn HTML',
     data: '17/06/2022',
     name: 'task1',
     isCompleted: true

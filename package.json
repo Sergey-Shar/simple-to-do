@@ -12,6 +12,10 @@
   "lint-staged": {
     "*.{js}": "npx eslint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergey-Shar/simple-to-do.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint-staged"
@@ -20,14 +24,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergey-Shar/simple-to-do/issues"
+  },
+  "homepage": "https://github.com/Sergey-Shar/simple-to-do#readme",
   "devDependencies": {
     "eslint": "^8.32.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3",
-    "husky": "^8.0.0"
+    "prettier": "^2.8.3"
   }
 }
