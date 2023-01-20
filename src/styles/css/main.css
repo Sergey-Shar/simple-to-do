@@ -1,0 +1,229 @@
+@charset "UTF-8";
+textarea,
+input,
+button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+
+button {
+  color: #3992ff;
+  font-weight: 500;
+}
+
+textarea,
+input:hover,
+button:hover {
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.6), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.6), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+}
+
+button:active {
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.4);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.4);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+textarea,
+input,
+button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+
+button {
+  color: #3992ff;
+  font-weight: 500;
+}
+
+textarea,
+input:hover,
+button:hover {
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.6), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.6), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+}
+
+button:active {
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.4);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.4);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+.create-task-block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  width: 50%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid hsla(0deg, 0%, 0%, 0.2);
+}
+.create-task-block-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+.create-task-block-wrapper form input {
+  width: 70%;
+}
+
+.tasks-list {
+  margin-top: 30px;
+  padding: 20px;
+  height: 400px;
+  overflow: auto;
+  width: 50%;
+  border-radius: 8px;
+  border: 1px solid hsla(0deg, 0%, 0%, 0.2);
+}
+
+.task-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  min-height: 100px;
+  -webkit-box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0px 1px hsla(0deg, 0%, 0%, 0.2), 0 1px 2px hsla(0deg, 0%, 0%, 0.2);
+}
+.task-card .task-label {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: rgb(94, 102, 116);
+}
+.task-card .checked-task {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 18px;
+}
+.task-card .check-style {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3992ff;
+  margin-left: -18px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.task-card .checked-task:checked + .check-style::before {
+  content: "✔";
+  color: #3992ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.task-card .checked-task:checked ~ .task-label {
+  text-decoration: line-through;
+}
+.task-card button {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 1.5rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 50%;
+  padding: 0px 10px;
+}
+.task-card .creation-task-date {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(94, 102, 116);
+}
+
+.no-plans {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: rgb(94, 102, 116);
+}
