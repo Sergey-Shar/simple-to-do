@@ -1,65 +1,74 @@
 .task-card {
-	position: relative;
-	display: flex;
-	padding-left: 40px;
-	align-items: center;
-	margin-bottom: 10px;
-	border-radius: 8px;
-	min-height: 100px;
-	box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  position: relative;
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  min-height: 100px;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 
-	.task-label {
-		font-family: "Raleway", sans-serif;
-		font-size: 20px;
-		color: rgb(94, 102, 116);
-	}
+  .task-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: rgb(94, 102, 116);
+  }
 
-	.checked-task {
-		position: absolute;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-		padding-left: 18px;
-	}
+  .checked-task {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 18px;
+  }
 
-	.check-style {
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		border: 2px solid #3992ff;
-		margin-left: -18px;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+  .check-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3992ff;
+    margin-left: -18px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-	.checked-task:checked + .check-style::before {
-		content: "\2714";
-		color: #3992ff;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+  .checked-task:checked + .check-style::before {
+    content: '\2714';
+    color: #3992ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-	.checked-task:checked ~.task-label {
-		text-decoration: line-through;
-	}
+  .checked-task:focus + .check-style {
+    box-shadow: 0 0 2px #000;
+  }
 
-	button {
-		position: absolute;
-		top: 3px;
-		right: 10px;
-		font-size: 1.5rem;
-		box-shadow: none;
-        border-radius: 50%;
-        padding: 0px 10px;
-	}
-	.creation-task-date {
-		position: absolute;
-		bottom: 5px;
-		right: 10px;
-		font-family: "Raleway", sans-serif;
-		color: rgb(94, 102, 116);
-	}
+  .checked-task:checked ~ .task-label {
+    text-decoration: line-through;
+  }
+
+  button {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 1.5rem;
+    box-shadow: none;
+    border-radius: 50%;
+    padding: 0px 10px;
+    transition: transform 1s, color 1s;
+    &:hover {
+      transform: scale(1.2);
+      color: #1977f2;
+    }
+  }
+  .creation-task-date {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(94, 102, 116);
+  }
 }

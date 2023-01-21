@@ -45,6 +45,7 @@ const createAddTasksBlock = () => {
   addTasksInput.type = 'text'
   addTasksInput.placeholder = 'task...'
   addTasksInput.value = ''
+  addTasksInput.autofocus = true
 
   const addTasksBtn = document.createElement('button')
   addTasksBtn.className = 'add-tasks__button'
@@ -85,7 +86,11 @@ const createTasksCard = (id, task, date, name, isCompleted) => {
   const deleteCardBtn = document.createElement('button')
   deleteCardBtn.className = 'delete-card__button'
   deleteCardBtn.type = 'button'
-  deleteCardBtn.innerHTML = '&times'
+  // deleteCardBtn.innerHTML = '&times'
+  const deleteIcon = document.createElement('span')
+  deleteCardBtn.className = 'delete-icon'
+  deleteIcon.innerHTML = '&times'
+  deleteCardBtn.appendChild(deleteIcon)
 
   const creationTaskDate = document.createElement('span')
   creationTaskDate.className = 'creation-task-date'

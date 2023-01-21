@@ -12,6 +12,7 @@ button {
   background-color: white;
   line-height: 1.5;
   margin: 0;
+  outline-color: #1977f2;
 }
 
 button {
@@ -81,6 +82,7 @@ button {
   background-color: white;
   line-height: 1.5;
   margin: 0;
+  outline-color: #1977f2;
 }
 
 button {
@@ -199,6 +201,10 @@ button:active {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.task-card .checked-task:focus + .check-style {
+  -webkit-box-shadow: 0 0 2px #000;
+          box-shadow: 0 0 2px #000;
+}
 .task-card .checked-task:checked ~ .task-label {
   text-decoration: line-through;
 }
@@ -211,6 +217,15 @@ button:active {
           box-shadow: none;
   border-radius: 50%;
   padding: 0px 10px;
+  -webkit-transition: color 1s, -webkit-transform 1s;
+  transition: color 1s, -webkit-transform 1s;
+  transition: transform 1s, color 1s;
+  transition: transform 1s, color 1s, -webkit-transform 1s;
+}
+.task-card button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #1977f2;
 }
 .task-card .creation-task-date {
   position: absolute;
