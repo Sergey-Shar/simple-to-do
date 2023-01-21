@@ -1,9 +1,29 @@
 .tasks-list{
+    position: relative;
     margin-top: 30px;
     padding: 20px;
     height: 400px;
     overflow: auto;
+    scrollbar-width: none;
     width: 50%;
     border-radius: 8px;
     border: 1px solid hsla(0, 0%, 0%, 0.2);
+    .top-button{
+        position: sticky;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        transition: 1s;
+        transform: translateX(620px);
+        bottom: 0px;
+        font-size: 25px;
+        border-radius: 50%;
+        padding: 10px 20px;
+        background-color: rgb(224, 224, 224);
+        box-shadow: none;
+    }
+    .top-button.active{
+        visibility: visible;
+        opacity: 1;
+    }
 }
