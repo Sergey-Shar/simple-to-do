@@ -2,3 +2,6 @@ node_modules
 events.js
 local.storage.js
 listeners.js
+app.js
+index.js
+addTask.js

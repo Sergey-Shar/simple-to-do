@@ -155,27 +155,6 @@ button:active {
   border-radius: 8px;
   border: 1px solid hsla(0deg, 0%, 0%, 0.2);
 }
-.tasks-list .top-button {
-  position: sticky;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateX(620px);
-          transform: translateX(620px);
-  bottom: 0px;
-  font-size: 25px;
-  border-radius: 50%;
-  padding: 10px 20px;
-  background-color: rgb(224, 224, 224);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.tasks-list .top-button.active {
-  visibility: visible;
-  opacity: 1;
-}
 
 .task-card {
   position: relative;
@@ -264,4 +243,28 @@ button:active {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   color: rgb(94, 102, 116);
+}
+
+.top-button {
+  position: sticky;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translate(250px, -60px);
+          transform: translate(250px, -60px);
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 10px 20px;
+  background-color: rgb(224, 224, 224);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.top-button.active {
+  -webkit-transform: translate(250px, -80px);
+          transform: translate(250px, -80px);
+  visibility: visible;
+  opacity: 1;
 }
