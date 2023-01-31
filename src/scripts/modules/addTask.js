@@ -3,7 +3,6 @@ import { validate } from './validate.js'
 import { renderTasks } from './renderTasks.js'
 import { handlerScrollBottom } from './scrollTasks.js'
 
-
 function createTask (value) {
   return {
     id: Date.now().toString(),
@@ -20,7 +19,7 @@ function addTask (value) {
   setDataLocalStorage('tasks', tasks)
 }
 
-export function handlerAddNewTask(event, tasksListNode) {
+export function handlerAddNewTask (event, tasksListNode) {
   event.preventDefault()
   const { target } = event
   const input = target.taskName

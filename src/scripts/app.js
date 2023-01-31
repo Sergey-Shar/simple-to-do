@@ -7,7 +7,7 @@ import { handlerDeleteAllTask } from './modules/deleteAllTasks.js'
 import { handlerShowScrollButton, handlerScrollTop } from './modules/scrollTasks.js'
 import { renderTasks } from './modules/renderTasks.js'
 
-export function initApp() {
+export function initApp () {
   const root = document.querySelector('#root')
 
   const container = document.createElement('main')
