@@ -1,8 +1,8 @@
 import { getDataLocalStorage } from '../utils.js'
 
-export function validate (value) {
+export const validate = (value) => {
   const tasks = getDataLocalStorage('tasks')
-  if (tasks.some((task) => task.text === value)) {
+  if (tasks.some(({ text }) => text === value)) {
     alert('this case already exists!')
     return false
   } else if (!value.trim()) {

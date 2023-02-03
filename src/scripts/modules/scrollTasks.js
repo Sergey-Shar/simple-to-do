@@ -6,7 +6,7 @@ export function handlerScrollTop (tasksListNode) {
   })
 }
 
-export function handlerScrollBottom (tasksListNode) {
+export const handlerScrollBottom = (tasksListNode) => {
   tasksListNode.scrollTo({
     left: 0,
     top: tasksListNode.scrollHeight - tasksListNode.clientHeight,
@@ -14,7 +14,7 @@ export function handlerScrollBottom (tasksListNode) {
   })
 }
 
-export function handlerShowScrollButton (event, topButton) {
+export const handlerShowScrollButton = (event, topButton) => {
   if (event.currentTarget.scrollTop > 100) {
     topButton.classList.add('active')
   } else {

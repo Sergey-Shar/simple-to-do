@@ -1,6 +1,6 @@
 import { getDataLocalStorage, setDataLocalStorage } from '../utils.js'
 
-function compliedTask (id, checked) {
+const compliedTask = (id, checked) => {
   const tasks = getDataLocalStorage('tasks')
   const updateTasks = tasks.map((item) => {
     if (item.id === id) {
@@ -13,7 +13,7 @@ function compliedTask (id, checked) {
   setDataLocalStorage('tasks', updateTasks)
 }
 
-export function handlerIsChecked (event) {
+export const handlerIsChecked = (event) => {
   const { target } = event
   const idItem = target.closest('.task-card').id
   const checked = target.checked

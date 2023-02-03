@@ -1,13 +1,12 @@
 import { getDataLocalStorage } from '../utils.js'
-import { createTasksCard } from '../components/tasksCard.js'
-import { createNotTaskBlock } from '../components/notTasksBlock.js'
+import { createTasksCard, createNotTaskBlock } from '../components/ui'
 
-export function renderTasks (listNode) {
+export const renderTasks = (listNode) => {
   listNode.innerHTML = ''
   const tasks = getDataLocalStorage('tasks')
   if (tasks.length > 0) {
-    tasks.forEach(({ id, text, data, isCompleted }) => {
-      const taskCard = createTasksCard(id, text, data, isCompleted)
+    tasks.forEach(({ id, text, date, isCompleted }) => {
+      const taskCard = createTasksCard(id, text, date, isCompleted)
       listNode.append(taskCard)
     })
   } else {

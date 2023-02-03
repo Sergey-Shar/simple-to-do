@@ -1,12 +1,12 @@
-function setDataLocalStorage (key, data) {
+const setDataLocalStorage = (key, data) => {
   localStorage.setItem(key, JSON.stringify(data))
 }
 
-function getDataLocalStorage (key) {
+const getDataLocalStorage = (key) => {
   return JSON.parse(localStorage.getItem(key) ?? '[]')
 }
 
-function clearInput (input) {
+const clearInput = (input) => {
   input.value = ''
 }
 

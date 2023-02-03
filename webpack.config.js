@@ -42,11 +42,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // loader для того что бы сборщик мог работать с css
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
       // loader для того что бы сборщик мог работать с scss
       {
         test: /\.s[ac]ss$/i,

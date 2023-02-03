@@ -1,4 +1,4 @@
-export function createTopScrollBtn () {
+export const createTopScrollBtn = () => {
   const topButton = document.createElement('button')
   topButton.type = 'button'
   topButton.className = 'top-button'

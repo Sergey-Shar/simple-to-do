@@ -1,13 +1,15 @@
-import { createAddTasksBlock } from './components/addTasksBlock.js'
-import { createTopScrollBtn } from './components/topScrollButton.js'
-import { handlerAddNewTask } from './modules/addTask.js'
-import { handlerDeleteTask } from './modules/deleteTask.js'
-import { handlerIsChecked } from './modules/completedTask.js'
-import { handlerDeleteAllTask } from './modules/deleteAllTasks.js'
-import { handlerShowScrollButton, handlerScrollTop } from './modules/scrollTasks.js'
-import { renderTasks } from './modules/renderTasks.js'
+import { createAddTasksBlock, createTopScrollBtn } from './components/ui'
+import {
+  handlerAddNewTask,
+  handlerDeleteTask,
+  handlerIsChecked,
+  handlerDeleteAllTask,
+  handlerShowScrollButton,
+  handlerScrollTop,
+  renderTasks
+} from './modules'
 
-export function initApp () {
+export const initApp = () => {
   const root = document.querySelector('#root')
 
   const container = document.createElement('main')

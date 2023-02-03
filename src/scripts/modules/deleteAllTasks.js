@@ -1,7 +1,7 @@
 import { getDataLocalStorage, setDataLocalStorage } from '../utils.js'
 import { renderTasks } from './renderTasks.js'
 
-export function deleteAllTask () {
+export const deleteAllTask = () => {
   const tasks = getDataLocalStorage('tasks')
   if (tasks.length > 0 && confirm('delete all task?')) {
     tasks.length = 0
@@ -11,7 +11,7 @@ export function deleteAllTask () {
   }
 }
 
-export function handlerDeleteAllTask (tasksListNode) {
+export const handlerDeleteAllTask = (tasksListNode) => {
   deleteAllTask()
   renderTasks(tasksListNode)
 }
