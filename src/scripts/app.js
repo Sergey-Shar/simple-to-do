@@ -12,8 +12,9 @@ import {
 } from './modules'
 
 export const initApp = () => {
-  document.documentElement.setAttribute('theme', `${getDataLocalStorage('theme')}`)
-  console.log(document.documentElement)
+  let theme = null
+  getDataLocalStorage('theme').length > 0 ? theme = getDataLocalStorage('theme') : theme = 'light'
+  document.documentElement.setAttribute('theme', `${theme}`)
   const root = document.querySelector('#root')
 
   const container = document.createElement('main')
