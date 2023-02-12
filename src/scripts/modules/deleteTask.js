@@ -1,8 +1,11 @@
-import { getDataLocalStorage, setDataLocalStorage } from '../utils.js'
+import { getDataLocalStorage, setDataLocalStorage, showConfetti } from '../utils.js'
 import { renderTasks } from './renderTasks.js'
 
 const deleteTask = (id) => {
   const tasks = getDataLocalStorage('tasks')
+  if (tasks.length === 1) {
+    showConfetti()
+  }
   const updateTasks = tasks.filter((item) => item.id !== id)
   setDataLocalStorage('tasks', updateTasks)
 }

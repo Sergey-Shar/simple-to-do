@@ -5,7 +5,7 @@ import { handlerScrollBottom } from './scrollTasks.js'
 
 const createTask = (value) => {
   return {
-    id: Date.now().toString(),
+    id: self.crypto.randomUUID(),
     text: value,
     date: new Date().toLocaleDateString(),
     isCompleted: false
