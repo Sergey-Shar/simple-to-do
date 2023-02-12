@@ -1,5 +1,8 @@
 .tasks-list{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 30px;
     padding: 20px;
     height: 400px;
@@ -7,5 +10,5 @@
     scrollbar-width: none;
     width: 50%;
     border-radius: 8px;
-    border: 1px solid hsla(0, 0%, 0%, 0.2);
+    border: var(--block-border);
 }

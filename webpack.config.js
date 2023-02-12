@@ -12,10 +12,10 @@ module.exports = {
   entry: './index.js',
   // указать куда будет идти сборка
   output: {
-    // такая запись более универсальна
+    // в name попадает динамическое название файла
     filename: '[name].[contenthash].js',
     // папка где будет лежать сборка
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     // очищаем папку каждый раз после сборки
     clean: true
   },
@@ -45,7 +45,38 @@ module.exports = {
       // loader для того что бы сборщик мог работать с scss
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            // post-css для того что бы css работал во всех браузерах
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [require('postcss-preset-env')]
+              }
+            }
+          },
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|webp|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/assets/icons/[name][ext]'
+        }
+      },
+      // babel для того что бы приложение работало и в старых браузерах
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', { targets: 'defaults' }]]
+          }
+        }
       }
     ]
   }

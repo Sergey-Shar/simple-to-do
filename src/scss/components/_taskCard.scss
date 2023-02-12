@@ -3,15 +3,14 @@
   display: flex;
   padding-left: 40px;
   align-items: center;
-  margin-bottom: 10px;
   border-radius: 8px;
-  min-height: 100px;
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  min-height: 112px;
+  box-shadow: var(--main-box-shadow);
 
   .task-label {
-    font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    color: rgb(94, 102, 116);
+    color: var(--color-text);
+    cursor: pointer;
   }
 
   .checked-task {
@@ -27,15 +26,16 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 2px solid #3992ff;
+    border: 2px solid var(--color-button);
     margin-left: -18px;
     top: 50%;
+    border-radius: 3px;
     transform: translate(-50%, -50%);
   }
 
   .checked-task:checked + .check-style::before {
     content: '\2714';
-    color: #3992ff;
+    color: var(--color-button);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,7 +43,8 @@
   }
 
   .checked-task:focus + .check-style {
-    box-shadow: 0 0 2px #000;
+    outline: solid 0 transparent;
+    box-shadow: 0 0 2px #080808;
   }
 
   .checked-task:checked ~ .task-label {
@@ -52,23 +53,29 @@
 
   button {
     position: absolute;
-    top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    top: 6px;
     right: 10px;
-    font-size: 40px;
+    font-size: 30px;
     box-shadow: none;
-    border-radius: 50%;
-    padding: 3.5px 12.5px;
+    border-radius: 100%;
+    padding: 0px;
     transition: transform 1s, color 1s;
+    & span {
+      padding-bottom: 3px;
+    }
     &:hover {
-      transform: scale(1.2);
-      color: #1977f2;
+      transform: scale(1.1);
     }
   }
   .creation-task-date {
     position: absolute;
     bottom: 5px;
     right: 10px;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(94, 102, 116);
+    color: var(--color-text);
   }
 }

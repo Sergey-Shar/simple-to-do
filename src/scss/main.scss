@@ -1,7 +1,10 @@
-@import "./config/core";
 @import "./config/fonts";
+@import "./config/variables";
+@import "./config/mixins";
 @import "./config/reset";
+@import "./config/core";
 @import "./components/container";
+@import "./components/toggle-theme-btn";
 @import "./components/formWrapper";
 @import "./components/tasksList";
 @import "./components/taskCard";

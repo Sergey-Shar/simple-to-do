@@ -1,0 +1,25 @@
+$main-fonts:"Raleway", sans-serif;
+$main-box-shadow:0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+$hover-box-shadow:0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+$active-box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+
+:root{
+     --bg-body:#fff;
+     --color-button: #3992ff;
+     --bg-color-scroll-btn:rgba(224, 224, 224, 1);
+     --color-text: rgb(94, 102, 116);
+     --block-border: 1px solid hsla(0, 0%, 0%, 0.2);
+     --input-btn-border:none;
+     --main-box-shadow:0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+:root:not([theme="light"]) {
+       --bg-body:rgb(11, 25, 33);
+       --main-box-shadow:0 0px 1px hsla(0, 4%, 68%, 0.2), 0 1px 2px hsla(0, 4%, 68%, 0.2);
+       --block-border: 1px solid hsla(0, 2%, 60%, 0.2);
+       --input-btn-border: 1px solid hsla(0, 6%, 77%, 0.2);
+       --bg-color-scroll-btn:rgb(14, 39, 54);
+    }
+
+
+

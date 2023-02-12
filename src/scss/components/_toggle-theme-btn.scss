@@ -1,0 +1,11 @@
+.toggle-theme__button {
+  position: relative;
+  z-index: 100;
+  box-shadow: none;
+  padding: 0 5px;
+  margin-right: 8px;
+  & span, img{
+  position: relative;
+  z-index: -100;
+  }
+}

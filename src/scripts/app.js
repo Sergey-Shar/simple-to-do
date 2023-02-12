@@ -1,4 +1,5 @@
 import { createAddTasksBlock, createTopScrollBtn } from './components/ui'
+import { getDataLocalStorage } from './utils'
 import {
   handlerAddNewTask,
   handlerDeleteTask,
@@ -6,10 +7,13 @@ import {
   handlerDeleteAllTask,
   handlerShowScrollButton,
   handlerScrollTop,
-  renderTasks
+  renderTasks,
+  handleToggleTheme
 } from './modules'
 
 export const initApp = () => {
+  document.documentElement.setAttribute('theme', `${getDataLocalStorage('theme')}`)
+  console.log(document.documentElement)
   const root = document.querySelector('#root')
 
   const container = document.createElement('main')
@@ -20,6 +24,7 @@ export const initApp = () => {
 
   const addTasksBlock = createAddTasksBlock()
   const deleteAllTaskButton = addTasksBlock.querySelector('.delete-all-tasks__button')
+  const toggleThemeButton = addTasksBlock.querySelector('.toggle-theme__button')
   const topButton = createTopScrollBtn()
 
   root.append(container)
@@ -33,6 +38,8 @@ export const initApp = () => {
   tasksList.addEventListener('click', (event) => handlerDeleteTask(event, tasksList))
 
   deleteAllTaskButton.addEventListener('click', () => handlerDeleteAllTask(tasksList))
+
+  toggleThemeButton.addEventListener('click', handleToggleTheme)
 
   tasksList.addEventListener('scroll', (event) => handlerShowScrollButton(event, topButton))
 

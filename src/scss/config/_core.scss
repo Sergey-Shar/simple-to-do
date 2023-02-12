@@ -1,29 +1,39 @@
-
+body {
+	background-color: var(--bg-body);
+	font-family: $main-fonts;
+}
 textarea,
 input,
 button {
 	font-size: 14px;
 	font-family: inherit;
-	border: none;
+	border: var( --input-btn-border);
 	border-radius: 8px;
 	padding: 10px 13px;
-	box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
-	background-color: white;
+	box-shadow: var(--main-box-shadow);
+	background-color: var(--bg-body);
 	line-height: 1;
 	margin: 0;
-	outline-color: #1977f2;
+	&:focus {
+		@include focus-outline();
+	}
+}
+textarea,
+input{
+	 color: var(--color-text)
 }
 button {
-	color: #3992ff;
+	color: var(--color-button);
 	font-weight: 900;
+	transition: box-shadow 1s;
 }
 textarea,
 input:hover,
 button:hover {
-	box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+	box-shadow: $hover-box-shadow;
 }
 
 button:active {
-	box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+	box-shadow: $active-box-shadow;
 	transform: translateY(1px);
 }

@@ -10,7 +10,7 @@ const deleteTask = (id) => {
 export const handlerDeleteTask = (event, tasksListNode) => {
   const { target } = event
   const parent = target.closest('div')
-  if (target.classList.contains('delete-card__button')) {
+  if (target.classList.contains('delete-card__button') || target.classList.contains('icon-btn')) {
     if (confirm('delete task?')) {
       deleteTask(parent.id)
       renderTasks(tasksListNode)

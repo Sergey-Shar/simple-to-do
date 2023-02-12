@@ -1,5 +1,6 @@
 import { getDataLocalStorage } from '../utils.js'
 import { createTasksCard, createNotTaskBlock } from '../components/ui'
+import JSConfetti from 'js-confetti'
 
 export const renderTasks = (listNode) => {
   listNode.innerHTML = ''
@@ -12,5 +13,7 @@ export const renderTasks = (listNode) => {
   } else {
     const noTasks = createNotTaskBlock()
     listNode.append(noTasks)
+    const jsConfetti = new JSConfetti()
+    jsConfetti.addConfetti({ confettiRadius: 6, confettiNumber: 500 })
   }
 }

@@ -5,6 +5,7 @@ import { handlerDeleteTask } from './deleteTask'
 import { renderTasks } from './renderTasks'
 import { handlerScrollBottom, handlerShowScrollButton, handlerScrollTop } from './scrollTasks'
 import { validate } from './validate'
+import { handleToggleTheme } from './toggleTheme'
 
 export {
   handlerAddNewTask,
@@ -16,5 +17,6 @@ export {
   handlerScrollTop,
   deleteAllTask,
   renderTasks,
-  validate
+  validate,
+  handleToggleTheme
 }
